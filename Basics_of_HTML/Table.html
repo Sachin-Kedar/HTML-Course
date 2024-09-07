@@ -3,37 +3,134 @@
     Within the table, each row of data is represented using the <tr> (table row) tag. 
     The column or row headings can be specified by the <th> (table heading) element.
     Finally, each data element within the table cells is specified using the <td> (table data) tag. 
+        
+1) HTML Table Borders:
+    HTML tables can have borders of different styles and shapes.
+    
+    A)How To Add a Border
+    To add a border, use the CSS border property on table, th, and td elements:
+        Example
+        table, th, td {
+        border: 1px solid black;
+        }
+    
+    B)Collapsed Table Borders
+    To avoid having double borders like in the example above, set the CSS border-collapse property to collapse.
+    This will make the borders collapse into a single border:
+        Example
+        table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        }
+
+    C)Style Table Borders
+    If you set a background color of each cell, and give the border a white color (the same as the document background), you get the impression of an invisible border:
+        Example
+        table, th, td {
+        border: 1px solid white;
+        border-collapse: collapse;
+        }
+        th, td {
+        background-color: #96D4D4;
+        }
+
+    D)Round Table Borders
+    With the border-radius property, the borders get rounded corners:
+        Example
+        table, th, td {
+        border: 1px solid black;
+        border-radius: 10px;
+        }
+            
+    
+    E)Dotted Table Borders
+    With the border-style property, you can set the appearance of the border.
+    The following values are allowed:
+        dotted     
+        dashed     
+        solid     
+        double     
+        groove     
+        ridge     
+        inset     
+        outset     
+        none     
+        hidden     
+            
+        Example:
+            th, td {
+            border-style: dotted;
+            }
+
+
+    F)Border Color
+    With the border-color property, you can set the color of the border.
+        Example:
+        th, td {
+        border-color: #96D4D4;
+        }
+
+  
+2) Table Sizes:
+    A) HTML Table Width:
+        To set the width of a table, add the style attribute to the <table> element:
+
+        Example
+        Set the width of the table to 100%:
+
+        <table style="width:100%">
+    
+    B)HTML Table Column Width
+        To set the size of a specific column, add the style attribute on a <th> or <td> element:
+        Example
+        Set the width of the first column to 70%:
+
+        <table style="width:100%">
+        <tr>
+            <th style="width:70%">Firstname</th>
+
+    C) HTML Table Row Height
+ 	 	To set the height of a specific row, add the style attribute on a table row element:
+
+        example:
+        <tr style="height:200px">
         -->
 
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tables in HTML</title>
-</head>
-<body>
+<html>
+  <head>
+    <title>Table in HTML</title>
+    <style>
+      table,th,td {
+        border: 1px dotted black;
+        border-collapse: collapse;
+        border-radius: 10px;
+      }
+      th, td {
+        background-color: yellow;
+        }
+    </style>
+  </head>
+
+  <body>
+    <h2>A basic HTML table</h2>
+
     <table>
-        <tr>
-            <th>Heading 1</th>
-            <th>Heading 2</th>
-            <th>Heading 3</th>
-        </tr>
-        <tr>
-            <td>H1 - Data Item 1</td>
-            <td>H2 - Data Item 1</td>
-            <td>H3 - Data Item 1</td>
-        </tr>
-        <tr>
-            <td>H1 - Data Item 2</td>
-            <td>H2 - Data Item 2</td>
-            <td>H3 - Data Item 2</td>
-        </tr>
-        <tr>
-            <td>H1 - Data Item 3</td>
-            <td>H2 - Data Item 3</td>
-            <td>H3 - Data Item 3</td>
-        </tr>
+      <tr>
+        <th>Company</th>
+        <th>Contact</th>
+        <th>Country</th>
+      </tr>
+      <tr>
+        <td>Alfreds Futterkiste</td>
+        <td>Maria Anders</td>
+        <td>Germany</td>
+      </tr>
+      <tr>
+        <td>Centro comercial Moctezuma</td>
+        <td>Francisco Chang</td>
+        <td>Mexico</td>
+      </tr>
     </table>
-</body>
+  </body>
 </html>

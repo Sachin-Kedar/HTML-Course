@@ -1,0 +1,148 @@
+<!-- 
+ 
+1) HTML Images Syntax
+    The HTML <img> tag is used to embed an image in a web page.
+
+    Images are not technically inserted into a web page; images are linked to web pages. 
+    The <img> tag creates a holding space for the referenced image.
+
+    The <img> tag is empty, it contains attributes only, and does not have a closing tag.
+
+    The <img> tag has two required attributes:
+
+    src - Specifies the path to the image
+    alt - Specifies an alternate text for the image
+    
+    Syntax
+    <img src="url" alt="alternatetext">
+    The src Attribute
+    The required src attribute specifies the path (URL) to the image.
+
+2) Image Size - Width and Height
+    You can use the style attribute to specify the width and height of an image.
+
+    Example
+    <img src="img_girl.jpg" alt="Girl in a jacket" style="width:500px;height:600px;">
+   
+    
+3) Image as a Link
+    To use an image as a link, put the <img> tag inside the <a> tag:
+
+    Example
+    <a href="default.asp">
+    <img src="smiley.gif" alt="HTML tutorial" style="width:42px;height:42px;">
+    </a>
+    
+4) HTML Background Images:
+    A background image can be specified for almost any HTML element.
+
+    A)Background Image on a HTML element:
+        To add a background image on an HTML element, use the HTML style attribute and the CSS background-image property:
+
+        Example
+        Add a background image on a HTML element:
+            <p style="background-image: url('img_girl.jpg');">
+                
+    B)You can also specify the background image in the <style> element, in the <head> section:
+        Example
+        Specify the background image in the <style> element:
+
+        <style>
+        p {
+        background-image: url('img_girl.jpg');
+        }
+        </style>
+
+
+    C)Background Image on a Page
+        If you want the entire page to have a background image, you must specify the background image on the <body> element:
+
+        Example
+        Add a background image for the entire page:
+
+        <style>
+        body {
+        background-image: url('img_girl.jpg');
+        }
+        </style>
+    
+    
+    D)Background Repeat
+        If the background image is smaller than the element, the image will repeat itself, 
+        horizontally and vertically, until it reaches the end of the element:
+        Example
+        <style>
+        body {
+        background-image: url('example_img_girl.jpg');
+        }
+        </style>
+        
+        To avoid the background image from repeating itself, set the background-repeat property to no-repeat.
+        Example
+        <style>
+        body {
+        background-image: url('example_img_girl.jpg');
+        background-repeat: no-repeat;
+        }
+        </style>
+
+    E)Background Cover
+        If you want the background image to cover the entire element, you can set the background-size property to cover.
+
+        Also, to make sure the entire element is always covered, set the background-attachment property to fixed:
+
+        This way, the background image will cover the entire element, with no stretching (the image will keep its original proportions):
+
+        Example
+        <style>
+        body {
+        background-image: url('img_girl.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        }
+        </style>
+
+
+    F)Background Stretch
+        If you want the background image to stretch to fit the entire element, you can set the background-size property to 100% 100%:
+
+        Try resizing the browser window, and you will see that the image will stretch, but always cover the entire element.
+
+        Example
+        <style>
+        body {
+        background-image: url('img_girl.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+        }
+        </style>
+
+    
+
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images in HTML</title>
+</head>
+<body>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbOOp7qhcy-onCNCn0hROvU4iWNuAjsXssQg&s" alt=" Hardik Pandya"><br><br>
+
+
+    <h2>Image with height and width as below</h2>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbOOp7qhcy-onCNCn0hROvU4iWNuAjsXssQg&s" alt=" Hardik Pandya" height="500px" width="700px" >
+<br>
+    <h2>Image as a link</h2>
+    <a href="https://www.google.com/search?q=nifty+50+depends+on+which+stocks&oq=&gs_lcrp=EgZjaHJvbWUqCQgHECMYJxjqAjIJCAAQIxgnGOoCMgkIARAjGCcY6gIyCQgCECMYJxjqAjIJCAMQIxgnGOoCMgkIBBAjGCcY6gIyCQgFECMYJxjqAjIJCAYQIxgnGOoCMgkIBxAjGCcY6gLSAQsxMDU5NzM1ajBqN6gCCLACAQ&sourceid=chrome&ie=UTF-8">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbOOp7qhcy-onCNCn0hROvU4iWNuAjsXssQg&s" alt="Nifty 50 depends on which stocks" style="width:42px;height:42px;">
+    </a>
+
+</body>
+</html>
