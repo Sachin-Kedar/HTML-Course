@@ -1,0 +1,170 @@
+<!-- Lists in HTML 
+ 
+1. Unordered List:
+    The HTML <ul> tag defines an unordered (bulleted) list.
+    An unordered list starts with the <ul> tag. Each list item starts with the <li> tag.
+    The list items will be marked with bullets (small black circles) by default:
+    example:
+             <ul>
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Milk</li>
+            </ul>
+
+    A)List Item Marker
+        The CSS list-style-type property is used to define the style of the list item marker. It can have one of the following values:
+            Value	Description
+            disc	Sets the list item marker to a bullet (default)
+            circle	Sets the list item marker to a circle
+            square	Sets the list item marker to a square
+            none	The list items will not be marked
+            
+            example: 
+             <ul style="list-style-type:disc;">
+
+    B) Nested HTML Lists
+        Lists can be nested (list inside list):
+        Example:
+            <ul>
+            <li>Coffee</li>
+            <li>Tea
+                <ul>
+                <li>Black tea</li>
+                <li>Green tea</li>
+                </ul>
+            </li>
+            <li>Milk</li>
+            </ul>
+
+
+2) Ordered Lists:
+    The HTML <ol> tag defines an ordered list. An ordered list can be numerical or alphabetical.
+    An ordered list starts with the <ol> tag. Each list item starts with the <li> tag.
+    The list items will be marked with numbers by default:
+
+    Example:
+        <ol>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+        </ol>
+    
+    A) The Type Attribute
+        The type attribute of the <ol> tag, defines the type of the list item marker:
+
+        Type	Description
+        type="1"	The list items will be numbered with numbers (default)
+        type="A"	The list items will be numbered with uppercase letters
+        type="a"	The list items will be numbered with lowercase letters
+        type="I"	The list items will be numbered with uppercase roman numbers
+        type="i"	The list items will be numbered with lowercase roman numbers
+
+        Example: 
+            <ol type="1">
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Milk</li>
+            </ol>
+                    -- Above example is of Numbers but it can be anything of mentioned above types.
+
+    B) Control List Counting:
+        By default, an ordered list will start counting from 1. 
+        If you want to start counting from a specified number, you can use the start attribute:
+
+        Example:
+            <ol start="50">
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Milk</li>
+            </ol>
+            
+            
+    C)Nested HTML Lists:
+        Lists can be nested (list inside list):
+        Example:
+            <ol>
+            <li>Coffee</li>
+            <li>Tea
+                <ol>
+                <li>Black tea</li>
+                <li>Green tea</li>
+                </ol>
+            </li>
+            <li>Milk</li>
+            </ol>
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lists in HTML</title>
+  </head>
+  <body>
+    <h2>Unordered list:</h2>
+    <ul>
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Milk</li>
+    </ul>
+
+    <h4>List item maker</h4>
+
+    <ul style="list-style-type: square">
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Milk</li>
+    </ul>
+
+    <h4>Nested List</h4>
+    <ul>
+      <li>Coffee</li>
+      <li>
+        Tea
+        <ul>
+          <li>Black tea</li>
+          <li>Green tea</li>
+        </ul>
+      </li>
+      <li>Milk</li>
+    </ul>
+
+    <h2>Ordered List</h2>
+    <ol>
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Milk</li>
+    </ol>
+
+    <h4>Type Attribute</h4>
+
+    <ol type="A">
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Milk</li>
+    </ol>
+
+    <h4>Control list counting</h4>
+
+    <ol start="50">
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Milk</li>
+    </ol>
+
+    <h4>Nested ordered List</h4>
+    <ol type="I">
+      <li>Coffee</li>
+      <li>
+        Tea
+        <ol>
+          <li>Black tea</li>
+          <li>Green tea</li>
+        </ol>
+      </li>
+      <li>Milk</li>
+    </ol>
+  </body>
+</html>
